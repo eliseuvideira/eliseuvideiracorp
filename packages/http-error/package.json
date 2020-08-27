@@ -16,5 +16,8 @@
       "prettier --check",
       "eslint"
     ]
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
