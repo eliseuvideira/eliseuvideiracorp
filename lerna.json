@@ -1,8 +1,13 @@
 {
   "npmClient": "yarn",
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "useWorkspaces": true,
-  "version": "0.1.1"
+  "version": "0.1.1",
+  "command": {
+    "version": {
+      "message": ":bookmark: v%s",
+      "gitTagVersion": false,
+      "push": false
+    }
+  }
 }
