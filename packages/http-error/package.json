@@ -1,0 +1,12 @@
+{
+  "name": "@eliseuvideiracorp/http-error",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
