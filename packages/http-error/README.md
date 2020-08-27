@@ -1,19 +1,31 @@
 # http-error
 
-> Error class to handle http status code
+> HttpError handles HTTP status code errors by extending Error base class
 
 ## Install
 
 ```bash
-yarn install @eliseuvideiracorp/http-error
+yarn add @eliseuvideiracorp/http-error
 ```
 
-## Usage
+## Example
 
 ```js
+const express = require('express');
 const { HttpError, isHttpError } = require('@eliseuvideiracorp/http-error');
 
-...
+const app = express();
+
+app.get('/users', (req, res, next) => {
+  try {
+    if (!req.user) {
+      throw new HttpError(401, 'Unauthorized');
+    }
+    res.status(200).send('😎');
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.use((req, res, next) => {
   next(new HttpError(404, 'Resource not found'));
@@ -31,7 +43,7 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message });
 });
 
-...
+app.listen(3000);
 ```
 
 ## License
