@@ -1,11 +1,30 @@
 # http-error
 
-> HttpError handles HTTP status code errors by extending Error base class
+> HttpError, extends the native Error class with an additional status code
 
 ## Install
 
 ```bash
 yarn add @eliseuvideiracorp/http-error
+```
+
+## API
+
+- HttpError, class extends Error
+
+  - constructor (status: number, message: string)
+  - HttpError.message
+  - HttpError.status
+  - HttpError.stack
+
+- isHttpError, function
+
+  - (error: any) => boolean
+
+## Usage
+
+```js
+const error = new HttpError(400, 'Bad request');
 ```
 
 ## Example
