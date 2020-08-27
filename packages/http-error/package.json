@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "lint-staged"
+    "lint": "lint-staged",
+    "prepublish": "yarn lint && yarn build"
   },
   "lint-staged": {
     "*.{js,json,jsx,ts,tsx}": [
