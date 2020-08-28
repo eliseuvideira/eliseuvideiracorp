@@ -1,6 +1,6 @@
 {
   "name": "@eliseuvideiracorp/express-error-middlewares",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "middleware"
   ],
   "dependencies": {
-    "@eliseuvideiracorp/http-error": "^0.1.6",
+    "@eliseuvideiracorp/http-error": "^0.1.7",
     "express": "^4.17.1"
   },
   "devDependencies": {
