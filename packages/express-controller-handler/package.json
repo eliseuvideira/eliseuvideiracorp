@@ -1,0 +1,37 @@
+{
+  "name": "@eliseuvideiracorp/express-controller-handler",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "lint-staged",
+    "prepublishOnly": "yarn lint && yarn build"
+  },
+  "lint-staged": {
+    "*.{js,json,jsx,ts,tsx}": [
+      "prettier --check",
+      "eslint"
+    ]
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliseuvideira/eliseuvideiracorp"
+  },
+  "keywords": [
+    "controller",
+    "handler",
+    "express",
+    "middleware"
+  ],
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
